@@ -2,10 +2,11 @@
 
 
 # django install
-python3 -m pip install Django
+ python3 -m pip install Django
 
-git clone https://github.com/shoumitro-cse/search-engine-using-django.git
-cd search-engine-using-django or custom project directory
+ git clone https://github.com/shoumitro-cse/search-engine-using-django.git
+
+ cd search-engine-using-django or custom project directory
  
  python3 manage.py runserver
 
