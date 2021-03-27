@@ -25,7 +25,7 @@ SECRET_KEY = '&21rh90=)%ridsb9m#v32ft#i@sldw-(dzdu90a#2=yquks8$@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -125,5 +125,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
+
+
+#python manage.py collectstatic
+#this cmd gather all static files into a folder called staticfiles in our project root directory.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 
