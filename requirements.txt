@@ -3,3 +3,4 @@ gunicorn
 django-on-heroku
 requests
 whitenoise==3.3.0
+django-utils-six
