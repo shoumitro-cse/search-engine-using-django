@@ -24,5 +24,5 @@
  pw: Rh12345678
 
 
-
+ # User Search History in an imagined Search Engine
 ![Search Engine Home Page Image](https://github.com/shoumitro-cse/search-engine-using-django/blob/main/search_engine.png?raw=true)
