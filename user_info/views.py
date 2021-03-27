@@ -125,7 +125,12 @@ class SearchResultsView(ListView):
     
     def get_queryset(self): 
         query = self.request.GET.get('q')
-        object_list = Users.objects.filter( Q(name__icontains=query) | Q(keywords__icontains=query))
+        print(query)
+
+        object_list = []
+        if query:
+            object_list = Users.objects.filter( Q(name__icontains=query) | Q(keywords__icontains=query))
+
         return object_list
 
 
