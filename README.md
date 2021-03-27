@@ -18,5 +18,7 @@
  
  # admin username and password
  user_name: rony
+ 
  email: rony@gmail.com
+ 
  pw: Rh12345678
