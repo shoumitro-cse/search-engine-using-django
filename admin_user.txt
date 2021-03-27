@@ -1,0 +1,6 @@
+ # go to given link
+ http://127.0.0.1:8000/admin/
+ 
+ user_name: rony
+ email: rony@gmail.com
+ pw: Rh12345678

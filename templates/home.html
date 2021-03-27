@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Engine</title>
+        {% load static %}
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    </head>
+    <body>
+        <div class="container">
+            <h4 style="margin-top: 0px; margin-bottom: 10px;">Please enter something (like CSE, Shoumitro) and press enter</h4>
+            <div class="top">
+                <form action="" method="get">
+                    <input name="q" type="search" placeholder="Search..." />
+                </form>
+            </div>
+
+            <h4 style="margin: 10px; text-align: center;">category wise checkbox list</h4>
+            <div class="content">
+
+                <!-- for keyword and user-->
+                <div class="col-1">
+                    <h4 style="text-align: center; margin: 0;">category 1</h4>
+                    <hr />
+
+                    <div style="display: flex;">
+
+                       <!-- for All Keywords-->
+                        <div class="keyword_list">
+                            <h4 style="margin: 5px;">All Keywords</h4>
+                            <ul>
+                                {% for d in keyword_list %}
+                                <li><input onchange="check(this, 'k')" value="{{ d.keywords }}" type="checkbox" name="" /> {{ d.keywords }} ({{ d.keywords__count }} times found)</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <!-- for All Users-->
+                        <div class="user_list">
+                            <h4 style="margin: 5px;">All Users</h4>
+                            <ul>
+                                {% for d in user_list %}
+                                <li><input onchange="check(this, 'u')" type="checkbox" value="{{d.id}}" name="" /> {{ d.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- for Time Range-->
+                <div style="border-left:0;border-right:0;" class="col-2">
+                    <h4 style="text-align: center; margin: 0;">category 2</h4>
+                    <hr />
+                    <h4 style="margin: 5px;">Time Range</h4>
+                    <ul>
+                        <li><input onchange="timeRangeDataView()" type="checkbox" id="yesterday" /> See data from yesterday</li>
+                        <li><input onchange="timeRangeDataView()" type="checkbox" id="week" /> See data from last week</li>
+                        <li><input onchange="timeRangeDataView()" type="checkbox" id="month" /> See data from last month</li>
+                    </ul>
+                </div>
+
+                <!-- for select date-->
+                <div class="col-3">
+                    <h4 style="text-align: center; margin: 0;">category 3</h4>
+                    <hr />
+                    <h4 style="margin: 5px;">Select Date</h4>
+                    <ul>
+                        <li>Enter start date: <input onchange="selectDateView()" value="" type="date" id="start_date" /></li>
+                        <li>Enter end date: <input onchange="selectDateView()" value="" type="date" id="end_date" /></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--  for search result-->
+            <div id="search"></div>
+        </div>
+
+        <script src="{% static 'js/common.js' %}"></script>
+    </body>
+</html>
