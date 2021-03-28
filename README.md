@@ -5,8 +5,7 @@
 https://usersearchengine.herokuapp.com/
 
 
-# django install
- python3 -m pip install Django
+# project local install
 
  git clone https://github.com/shoumitro-cse/search-engine-using-django.git
 
